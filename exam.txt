@@ -1,0 +1,4 @@
+number(0..5).
+1{quiz(N):number(N)}1 :- number(X).
+quiz(2*N) :- quiz(N), number(N).
+#show quiz/1.

@@ -1,0 +1,14 @@
+parentOf(georgeI, johnI). 
+parentOf(georgeI, thomas).
+parentOf(johnI, johnII). 
+parentOf(thomas, jamesI).
+parentOf(johnII, williamI). 
+parentOf(jamesI, jamesII).
+parentOf(williamI, johnIII). 
+parentOf(jamesII, andrewI).
+parentOf(andrewI, martin).
+parentOf(martin, jamesIII).
+
+ancestorOf(X,Y) :- parentOf(X,Y).
+ancestorOf(X,Z) :- ancestorOf(X,Y), ancestorOf(Y,Z).
+#show ancestorOf/2.

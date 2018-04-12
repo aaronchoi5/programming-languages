@@ -1,0 +1,6 @@
+road(berlin,potsdam).
+road(potsdam,werder).
+road(werder,brandenburg).
+road(X,Y) :-road(Y,X).
+
+#show road/2.
